@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/text.css') }}">
+</head>
+<body>
+    <section class="dark">
+        <div class="container py-4">
+            <h1 class="h1 text-center" id="pageHeaderTitle">LAB STATUS</h1>
+
+            <article class="postcard dark {{ 'available' if class_status == 'Class Available' else 'unavailable' }}">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="/static/images/picture4.jpg" alt="Classroom Image" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title">{{ class_status }}</h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="{{ timestamp }}">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{ timestamp }}
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">
+                        {% if class_status == 'Class Unavailable' %}
+                            Number of people in the classroom: {{ num_faces }}
+                        {% else %}
+                            Classroom is available and no motion detected recently {{num_faces}}.
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/text.css') }}">
+</head>
+<body>
+    <section class="dark">
+        <div class="container py-4">
+            <h1 class="h1 text-center" id="pageHeaderTitle">LAB AVAILABLE</h1>
+
+            <article class="postcard dark {{ 'available' if class_status == 'Class Available' else 'unavailable' }}">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="/static/images/picture4.jpg alt="Classroom Image" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title">{{ class_status }}</h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="{{ timestamp }}">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{ timestamp }}
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Classroom availability and details will be shown here.</div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html> -->
